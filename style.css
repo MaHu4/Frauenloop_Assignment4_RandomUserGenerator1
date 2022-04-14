@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family:'Roboto', sans-serif;
+    font-size: 50px;
+    color: whitesmoke;
+    text-decoration-line: underline;
+    text-decoration-style:solid;
+    margin-top: 3rem;
+}
+    /* Body */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family:'Nunito', sans-serif;
+    background: url(Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: gainsboro;
+    color: black;
+}
+
+    /*overlay of bg-image */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background-color: black; /*overlayer*/
+    opacity: 0.7;
+    z-index: -1; /*image and text not opaque*/
+}
+
+    /* Profile-Box*/
+
+.user-profile {
+    background-color: gainsboro;
+    margin-top: 6%; /* always 6% from top*/
+    max-width: 400px;
+    border-radius: 1rem; /*rounded corners*/
+    overflow: hidden; /*image overriden corner*/
+    box-shadow: rgba(0, 0, 0, 0.4); Opx 90px 90px;
+}
+.profile-top {
+    background: linear-gradient(to right,#005580,#8e2de2);
+    padding: 1rem;
+    text-align: center;
+    color: whitesmoke
+}
+
+.profile-top img {
+    border-radius: 50%;
+    border: 5px solid whitesmoke
+}
+
+.profile-top .profile-info {
+    margin-top: 1rem;
+}
+
+.profile-bottom {
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+.profile-bottom .profile-info {
+    background-color: whitesmoke;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    transition: 0.5s ease;
+}
+
+.profile-bottom .profile-info .material-icons {
+    margin-right: 1rem;
+    color: gray;
+}
+
+.profile-top .profile-info:hover {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67,0.15) 0px 1px 3px 1px;
+}
+
+button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    outline: none;
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right,#005580,#8e2de2);
+    color: whitesmoke;
+}
